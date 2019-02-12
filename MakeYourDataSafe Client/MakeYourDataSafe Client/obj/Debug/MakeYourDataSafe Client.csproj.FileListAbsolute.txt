@@ -1,0 +1,10 @@
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.csprojAssemblyReference.cache
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe_Client.mainForm.resources
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe_Client.Properties.Resources.resources
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.csproj.GenerateResource.cache
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.csproj.CoreCompileInputs.cache
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.exe.config
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.exe
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.pdb
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.exe
+C:\Users\korom\Documents\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.pdb
