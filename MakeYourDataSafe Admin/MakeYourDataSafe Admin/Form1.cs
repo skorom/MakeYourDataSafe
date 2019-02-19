@@ -16,5 +16,22 @@ namespace MakeYourDataSafe_Admin
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Computers.Rows.Add("five", "six", "seven", "eight");
+            this.Computers.Rows.Add("five", "six", "seven", "eight");
+
+        }
+
+        private void keys_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rowChange(object sender, EventArgs e)
+        {
+
+        }
     }
 }
