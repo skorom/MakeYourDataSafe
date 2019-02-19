@@ -1,0 +1,10 @@
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\MakeYourDataSafe Admin.exe.config
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\MakeYourDataSafe Admin.exe
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\MakeYourDataSafe Admin.pdb
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.csprojAssemblyReference.cache
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe_Admin.Properties.Resources.resources
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.csproj.GenerateResource.cache
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.csproj.CoreCompileInputs.cache
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.exe
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.pdb
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe_Admin.Form1.resources
