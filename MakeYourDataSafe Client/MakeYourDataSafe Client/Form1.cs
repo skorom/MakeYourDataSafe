@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace MakeYourDataSafe_Client
 {
@@ -21,24 +22,54 @@ namespace MakeYourDataSafe_Client
         private void mainForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            copyfile();
+            //copyfile();
+            //;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DriveInfo drive;
-            DriveInfo[] allDrives = DriveInfo.GetDrives();
-            foreach (DriveInfo item in allDrives)
+            string path = (Environment.UserName + "\\Appdata\\LocalLow");
+            //Appdata pathet meg kéne mán csinálni mert agyhúgykövet kapok ettől a fostól. (A lenti megoldások mindig ugyanannak a felhasználónak a Roaming mappáját nyitják meg, attól független, hogy ki van épp bejelentkezve)
+
+            label1.Text = path;
+            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe");
+            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe") == false)
             {
-                if (item.Name[0] == 'C')
+                
+            }
+            /*while (getFreeDiskSpace('C') < getDiskSize('C') * 0.91)
+            {
+                File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/MakeYourDataSafe/file.txt", new byte[10000]);
+            }*/
+
+            //Appdataba rakni fájlokat, ha még van elég hely
+        }
+
+        private long getFreeDiskSpace(char driveName)
+        {
+            foreach (DriveInfo item in DriveInfo.GetDrives())
+            {
+                if (item.Name[0] == driveName)
                 {
-                    drive = item;
-                    break;
+                    return item.AvailableFreeSpace;
                 }
             }
-            //Appdataba rakni fájlokat, ha még van elég hely
-            //System.IO.File.WriteAllBytes("file.txt", new byte[10000]);
+            return 0;
         }
+
+        private long getDiskSize(char driveName)
+        {
+            foreach (DriveInfo item in DriveInfo.GetDrives())
+            {
+                if (item.Name[0] == driveName)
+                {
+                    return item.TotalSize;
+                }
+            }
+            return 0;
+        }
+
         private void copyfile()
         {
             string i = System.Reflection.Assembly.GetEntryAssembly().Location;
