@@ -14,34 +14,33 @@ namespace MakeYourDataSafe_Client
 {
     public partial class mainForm : Form
     {
+        //public string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe";
+        public string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\MakeYourDataSafe\\Important Files";
+
         public mainForm()
         {
             InitializeComponent();
         }
 
         private void mainForm_Load(object sender, EventArgs e)
-        {
+        {   
+            if (Directory.Exists(path) == false)
+            {
+                Directory.CreateDirectory(path);
+            }
             timer1.Start();
             //copyfile();
             //;
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string path = (Environment.UserName + "\\Appdata\\LocalLow");
-            //Appdata pathet meg kéne mán csinálni mert agyhúgykövet kapok ettől a fostól. (A lenti megoldások mindig ugyanannak a felhasználónak a Roaming mappáját nyitják meg, attól független, hogy ki van épp bejelentkezve)
-
-            label1.Text = path;
-            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe");
-            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe") == false)
+            label1.Text = "Total: " + getDiskSize('C') + " | Free: " + getFreeDiskSpace('C');
+            if (getFreeDiskSpace('C') < getDiskSize('C') * 0.5)
             {
-                
+                int i = Directory.GetFiles(path).Length;
+                File.WriteAllBytes(path + "\\file" + i + ".txt", new byte[10485760]);
             }
-            /*while (getFreeDiskSpace('C') < getDiskSize('C') * 0.91)
-            {
-                File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/MakeYourDataSafe/file.txt", new byte[10000]);
-            }*/
 
             //Appdataba rakni fájlokat, ha még van elég hely
         }
