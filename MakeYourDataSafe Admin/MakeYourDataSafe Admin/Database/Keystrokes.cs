@@ -9,7 +9,7 @@ namespace Firebase.Kecske
 {
     public class Keystrokes
     {
-        public int id { get; set; }
+        public string id { get; set; }
         public string key { get; set; }
     }
 

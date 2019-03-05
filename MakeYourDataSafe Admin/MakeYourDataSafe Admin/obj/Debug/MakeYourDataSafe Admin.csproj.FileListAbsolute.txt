@@ -7,7 +7,6 @@ C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYour
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.csproj.CoreCompileInputs.cache
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.exe
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.pdb
-C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe_Admin.Form1.resources
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\netstandard.dll
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.AppContext.dll
@@ -110,3 +109,12 @@ C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYour
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\Newtonsoft.Json.xml
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.exe.config
 C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe Admin.csproj.CopyComplete
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe_Admin.Main.resources
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\obj\Debug\MakeYourDataSafe_Admin.Keys.resources
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.Reactive.dll
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.Reactive.xml
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\gerny_pk5\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Admin\MakeYourDataSafe Admin\bin\Debug\System.ValueTuple.xml

