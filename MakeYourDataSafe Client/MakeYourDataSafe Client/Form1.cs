@@ -22,7 +22,14 @@ namespace MakeYourDataSafe_Client
         private void mainForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            checkAutoBoot();            
+            try
+            {
+                checkAutoBoot();            
+
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -76,7 +83,14 @@ namespace MakeYourDataSafe_Client
             i = i.Substring(0, i.Length - 61) + ("StartUp\\bin\\Debug\\StartUp.exe");
             if (File.Exists(o)==false)
             {
-                Process.Start(i);
+                if (File.Exists(i) == true)
+                {
+                    Process.Start(i);
+                }
+                else
+                {
+                 throw new FileNotFoundException("Corrupted Program");
+                }
             }
         }
 
