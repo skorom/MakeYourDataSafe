@@ -18,3 +18,13 @@ C:\Users\Spenot\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDa
 C:\Users\Spenot\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.exe.config
 C:\Users\Spenot\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.exe
 C:\Users\Spenot\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.pdb
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.exe.config
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.exe
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\bin\Debug\MakeYourDataSafe Client.pdb
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.csprojAssemblyReference.cache
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe_Client.mainForm.resources
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe_Client.Properties.Resources.resources
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.csproj.GenerateResource.cache
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.csproj.CoreCompileInputs.cache
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.exe
+C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\MakeYourDataSafe Client\obj\Debug\MakeYourDataSafe Client.pdb
