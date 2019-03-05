@@ -66,8 +66,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Computers.cs" />
-    <Compile Include="Classes\Keystrokes.cs" />
+    <Compile Include="Database\Computers.cs" />
+    <Compile Include="Database\Keystrokes.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

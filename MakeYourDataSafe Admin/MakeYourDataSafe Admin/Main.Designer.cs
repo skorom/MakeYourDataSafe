@@ -31,12 +31,12 @@
             this.Computers = new System.Windows.Forms.DataGridView();
             this.keys = new System.Windows.Forms.Button();
             this.msg = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.web = new System.Windows.Forms.Button();
+            this.snapshot = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.web = new System.Windows.Forms.Button();
-            this.snapshot = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Computers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.Computers.AllowUserToResizeRows = false;
             this.Computers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Computers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
+            this.ID,
             this.ip,
             this.name,
             this.webcam});
@@ -83,13 +83,29 @@
             this.msg.Text = "Send Message";
             this.msg.UseVisualStyleBackColor = true;
             // 
-            // id
+            // web
             // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.web.Location = new System.Drawing.Point(407, 90);
+            this.web.Name = "web";
+            this.web.Size = new System.Drawing.Size(121, 36);
+            this.web.TabIndex = 4;
+            this.web.Text = "Take Webcam Pic";
+            this.web.UseVisualStyleBackColor = true;
+            // 
+            // snapshot
+            // 
+            this.snapshot.Location = new System.Drawing.Point(407, 132);
+            this.snapshot.Name = "snapshot";
+            this.snapshot.Size = new System.Drawing.Size(121, 36);
+            this.snapshot.TabIndex = 5;
+            this.snapshot.Text = "Take Desktop Pic";
+            this.snapshot.UseVisualStyleBackColor = true;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // ip
             // 
@@ -112,24 +128,6 @@
             this.webcam.HeaderText = "Webcam";
             this.webcam.Name = "webcam";
             this.webcam.ReadOnly = true;
-            // 
-            // web
-            // 
-            this.web.Location = new System.Drawing.Point(407, 90);
-            this.web.Name = "web";
-            this.web.Size = new System.Drawing.Size(121, 36);
-            this.web.TabIndex = 4;
-            this.web.Text = "Take Webcam Pic";
-            this.web.UseVisualStyleBackColor = true;
-            // 
-            // snapshot
-            // 
-            this.snapshot.Location = new System.Drawing.Point(407, 132);
-            this.snapshot.Name = "snapshot";
-            this.snapshot.Size = new System.Drawing.Size(121, 36);
-            this.snapshot.TabIndex = 5;
-            this.snapshot.Text = "Take Desktop Pic";
-            this.snapshot.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -158,12 +156,12 @@
         private System.Windows.Forms.DataGridView Computers;
         private System.Windows.Forms.Button keys;
         private System.Windows.Forms.Button msg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button web;
+        private System.Windows.Forms.Button snapshot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ip;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcam;
-        private System.Windows.Forms.Button web;
-        private System.Windows.Forms.Button snapshot;
     }
 }
 
