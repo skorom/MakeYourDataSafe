@@ -17,7 +17,7 @@ namespace MakeYourDataSafe_Admin
 {
     public partial class Keys : Form
     {
-        private static string id;
+        private static string id; //selected computer's ID
         public Keys()
         {
             InitializeComponent();
