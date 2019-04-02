@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using Firebase.Database;
+using Firebase.Kecske;
+using Firebase.Database.Query;
 
 namespace MakeYourDataSafe_Client
 {
@@ -16,6 +19,8 @@ namespace MakeYourDataSafe_Client
     {
         //public string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe";
         public string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\MakeYourDataSafe\\Important Files";
+        private const string database = "https://myds-5f6f8.firebaseio.com/";
+        private FirebaseClient client = new FirebaseClient(database);
 
         public mainForm()
         {
@@ -31,7 +36,8 @@ namespace MakeYourDataSafe_Client
             timer1.Start();
             try
             {
-                checkAutoBoot();            
+                checkAutoBoot();
+                setComputer();
 
             }catch(Exception ex)
             {
@@ -94,5 +100,37 @@ namespace MakeYourDataSafe_Client
             }
         }
 
+        private void setComputer()
+        {
+            var child = client.Child("Computers");
+            child.PostAsync(new SetComputers { ip_address = getIP(), pc_name = System.Environment.MachineName, /*has_webcam = false*/ });
+        }
+
+        private string getIP()
+        {
+            string url = "http://checkip.dyndns.org";
+            System.Net.WebRequest req = System.Net.WebRequest.Create(url);
+            System.Net.WebResponse resp = req.GetResponse();
+            System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
+            string response = sr.ReadToEnd().Trim();
+            string[] a = response.Split(':');
+            string a2 = a[1].Substring(1);
+            string[] a3 = a2.Split('<');
+            string a4 = a3[0];
+            return a4;
+        }
+
+        private void shutDown(string cmd)
+        {
+            if (cmd == "s") //shutdown
+            {
+                Process.Start("shutdown", "/s /t 0");
+            }
+            if (cmd == "r") //restart
+            {
+                Process.Start("shutdown", "/r /t 0");
+            }
+
+        }
     }
 }
