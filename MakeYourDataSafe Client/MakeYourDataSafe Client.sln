@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeYourDataSafe Client", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{9B99E1C1-C371-48F2-A2BD-AF4879C11994}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCreate", "FileCreate\FileCreate.csproj", "{F1C4C711-09BD-4569-9113-EF8DB52081ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9B99E1C1-C371-48F2-A2BD-AF4879C11994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B99E1C1-C371-48F2-A2BD-AF4879C11994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B99E1C1-C371-48F2-A2BD-AF4879C11994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C4C711-09BD-4569-9113-EF8DB52081ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C4C711-09BD-4569-9113-EF8DB52081ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C4C711-09BD-4569-9113-EF8DB52081ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C4C711-09BD-4569-9113-EF8DB52081ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

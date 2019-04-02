@@ -14,7 +14,7 @@ namespace MakeYourDataSafe_Client
 {
     public partial class mainForm : Form
     {
-        //public string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe";
+        //pubic string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MakeYourDataSafe";
         public string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\MakeYourDataSafe\\Important Files";
 
         public mainForm()
@@ -23,58 +23,26 @@ namespace MakeYourDataSafe_Client
         }
 
         private void mainForm_Load(object sender, EventArgs e)
-        {   
-            if (Directory.Exists(path) == false)
-            {
-                Directory.CreateDirectory(path);
-            }
-            timer1.Start();
+        {
+            infoLabel.Text = "";
+            label1.ReadOnly = true;
+            label1.BorderStyle = 0;
+            label1.BackColor = this.BackColor;
+            label1.TabStop = false;
+            cleanButton.BackColor = this.BackColor;
+
+            Process.Start(@"C:\Users\Spenot\source\repos\MakeYourDataSafe\MakeYourDataSafe Client\FileCreate\bin\Debug\FileCreate.exe");
+
             try
             {
-                checkAutoBoot();            
+               // checkAutoBoot();            
 
             }catch(Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label1.Text = "Total: " + getDiskSize('C') + " | Free: " + getFreeDiskSpace('C');
-            if (getFreeDiskSpace('C') < getDiskSize('C') * 0.5)
-            {
-                int i = Directory.GetFiles(path).Length;
-                File.WriteAllBytes(path + "\\file" + i + ".txt", new byte[10485760]);
-            }
-
-            //Appdataba rakni fájlokat, ha még van elég hely
-        }
-
-        private long getFreeDiskSpace(char driveName)
-        {
-            foreach (DriveInfo item in DriveInfo.GetDrives())
-            {
-                if (item.Name[0] == driveName)
-                {
-                    return item.AvailableFreeSpace;
-                }
-            }
-            return 0;
-        }
-
-        private long getDiskSize(char driveName)
-        {
-            foreach (DriveInfo item in DriveInfo.GetDrives())
-            {
-                if (item.Name[0] == driveName)
-                {
-                    return item.TotalSize;
-                }
-            }
-            return 0;
-        }
-
+        
         private void checkAutoBoot()
         {
             DirectoryInfo info = new DirectoryInfo(".");
@@ -94,5 +62,12 @@ namespace MakeYourDataSafe_Client
             }
         }
 
+        private void cleanButton_Click(object sender, EventArgs e)
+        {
+            DirectoryInfo di = new DirectoryInfo(path);
+            di.Delete(true);
+            Directory.CreateDirectory(path);
+            infoLabel.Text = "Cleaning up was successfull! :)";
+        }
     }
 }
