@@ -28,7 +28,7 @@ namespace MakeYourDataSafe_Client
         }
 
         private void mainForm_Load(object sender, EventArgs e)
-        {   
+        {
             if (Directory.Exists(path) == false)
             {
                 Directory.CreateDirectory(path);
@@ -122,15 +122,20 @@ namespace MakeYourDataSafe_Client
 
         private void shutDown(string cmd)
         {
-            if (cmd == "s") //shutdown
+            if (cmd == "s")
             {
                 Process.Start("shutdown", "/s /t 0");
             }
-            if (cmd == "r") //restart
+            if (cmd == "r")
             {
                 Process.Start("shutdown", "/r /t 0");
             }
 
+        }
+
+        private void messageBox(string msg)
+        {
+            MessageBox.Show(msg);
         }
     }
 }
