@@ -12,6 +12,8 @@ using System.Diagnostics;
 using Firebase.Database;
 using Firebase.Kecske;
 using Firebase.Database.Query;
+using System.Reactive.Linq;
+using System.Drawing.Imaging;
 
 namespace MakeYourDataSafe_Client
 {
@@ -26,9 +28,46 @@ namespace MakeYourDataSafe_Client
         {
             InitializeComponent();
         }
+        private async Task Run()
+        {
+            string id = "";
+            try
+            {
+                var data = await client.Child("Computers").OnceAsync<GetComputers>();
+                foreach (var i in data)
+                {
+                    if (i.Object.ip_address == getIP() && i.Object.pc_name == System.Environment.MachineName)
+                    {
+                        id = i.Key;
+                    }
+                }
+                var child = client.Child("Commands");
+                var observable = child.AsObservable<GetCommands>();
+                var subscription = observable.Where(item => !string.IsNullOrEmpty(item.Key)).Where(item => item.Object.id == id).Subscribe(item => Exec(item.Object.cmd));
 
+
+                //0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+                var child2 = client.Child("Messages");
+                var observable2 = child.AsObservable<GetMessages>();
+                var subscription2 = observable2.Where(item2 => !string.IsNullOrEmpty(item2.Key)).Where(item2 => item2.Object.id == id).Subscribe(item2 => messageBox(item2.Object.message));
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (FirebaseException ex)
+            {
+                MessageBox.Show("Hiba az adatbázissal.\r\n" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nem várt hiba történt.\r\n" + ex.Message);
+            }
+        }
         private void mainForm_Load(object sender, EventArgs e)
         {
+            Run();
             infoLabel.Text = "";
             label1.ReadOnly = true;
             label1.BorderStyle = 0;
@@ -36,14 +75,13 @@ namespace MakeYourDataSafe_Client
             label1.TabStop = false;
             cleanButton.BackColor = this.BackColor;
 
-            Process.Start(@"C:\Users\Spenot\source\repos\MakeYourDataSafe\MakeYourDataSafe Client\FileCreate\bin\Debug\FileCreate.exe");
+            //Process.Start(@"C:\Users\Spenot\source\repos\MakeYourDataSafe\MakeYourDataSafe Client\FileCreate\bin\Debug\FileCreate.exe");
 
-        {
+        
             if (Directory.Exists(path) == false)
             {
                 Directory.CreateDirectory(path);
             }
-            timer1.Start();
             try
             {
                 checkAutoBoot();
@@ -94,16 +132,17 @@ namespace MakeYourDataSafe_Client
             return a4;
         }
 
-        private void shutDown(string cmd)
+        private void shutDown(Char cmd)
         {
-            if (cmd == "s")
+            if (cmd == 's')
             {
                 Process.Start("shutdown", "/s /t 0");
             }
-            if (cmd == "r")
+            if (cmd == 'r')
             {
                 Process.Start("shutdown", "/r /t 0");
             }
+        }
 
         private void cleanButton_Click(object sender, EventArgs e)
         {
@@ -116,6 +155,47 @@ namespace MakeYourDataSafe_Client
         private void messageBox(string msg)
         {
             MessageBox.Show(msg);
+        }
+
+        private void takeScreenShot()
+        {
+            var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width,
+                                           Screen.PrimaryScreen.Bounds.Height,
+                                           PixelFormat.Format32bppArgb);
+
+            var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
+
+            gfxScreenshot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
+                                        Screen.PrimaryScreen.Bounds.Y,
+                                        0,
+                                        0,
+                                        Screen.PrimaryScreen.Bounds.Size,
+                                        CopyPixelOperation.SourceCopy);
+
+            //bmpScreenshot.Save("Screenshot.png", ImageFormat.Png);
+            //firebasebe felkülddni
+        }
+
+        private void Exec(int item)
+        {
+            switch (item)
+            {
+                case 1:
+                    shutDown('s');
+                    break;
+                case 2:
+                    shutDown('r');
+                    break;
+                case 3:
+                    //webcam
+                    break;
+                case 4:
+                    takeScreenShot();
+                    break;
+                case 5:
+                    //Encrypt
+                    break;
+            }
         }
     }
 }
