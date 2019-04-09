@@ -11,6 +11,7 @@ namespace Firebase.Kecske
     {
         public string id { get; set; }
         public string img { get; set; }
+        public int type { get; set; } //3 - webcam | 4 - desktop
     }
 
     public class GetPictures : Pictures

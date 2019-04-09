@@ -42,7 +42,7 @@ namespace MakeYourDataSafe_Admin
                 var data = await client.Child("Pictures").OnceAsync<GetPictures>();
                 foreach (var i in data)
                 {
-                    if (i.Object.id == uid)
+                    if (i.Object.id == uid && i.Object.type == cmdtype)
                     {
                         var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(i.Object.img)));
                         this.pictureBox1.Image = img;

