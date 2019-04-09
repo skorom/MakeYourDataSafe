@@ -66,6 +66,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Commands.cs" />
+    <Compile Include="Database\Pictures.cs" />
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Messages.cs" />
     <Compile Include="Database\Computers.cs" />
     <Compile Include="Database\Keystrokes.cs" />
     <Compile Include="Main.cs">
@@ -80,13 +89,25 @@
     <Compile Include="Keys.Designer.cs">
       <DependentUpon>Keys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Picviewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Picviewer.Designer.cs">
+      <DependentUpon>Picviewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keys.resx">
       <DependentUpon>Keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Picviewer.resx">
+      <DependentUpon>Picviewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -110,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Grandma.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,0 @@
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\bin\Debug\StartUp.exe.config
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\bin\Debug\StartUp.exe
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\bin\Debug\StartUp.pdb
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\obj\Debug\StartUp.csprojAssemblyReference.cache
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\obj\Debug\StartUp.csproj.CoreCompileInputs.cache
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\obj\Debug\StartUp.exe
-C:\Users\Anita\Source\Repos\MakeYourDataSafe\MakeYourDataSafe Client\StartUp\obj\Debug\StartUp.pdb
